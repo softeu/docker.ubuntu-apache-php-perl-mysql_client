@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+MAINTAINER Jindrich Vimr <jvimr@softeu.com>
+
 RUN echo "1.565.1" > .lts-version-number
 
 RUN apt-get update && apt-get install -y wget git curl zip vim
@@ -28,7 +30,7 @@ volume "/var/log"
 
 #USER www-data
 
-VOLUME ["/var/www/html", "/var/log/apache2" ]
+#VOLUME ["/var/www/html", "/var/log/apache2" ]
 ENV SERVER_NAME docker-apache-php
 
 
